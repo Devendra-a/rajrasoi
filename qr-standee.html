@@ -249,6 +249,24 @@
       font-weight: 600;
     }
 
+    /* Mobile Screen Optimization */
+    @media (max-width: 500px) {
+      body {
+        padding: 1rem 0.75rem;
+      }
+      .controls-panel {
+        padding: 1rem;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+      .standee-card {
+        width: 100%;
+        max-width: 380px;
+      }
+    }
+
     /* ==========================================================================
        PRINT FORMATTING
        ========================================================================== */

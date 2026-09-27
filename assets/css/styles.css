@@ -2481,3 +2481,587 @@ ul, ol {
   border-color: var(--gold-primary);
   box-shadow: 0 8px 24px rgba(18, 20, 26, 0.15);
 }
+
+/* ==========================================================================
+   MOBILE & PHONE SCREEN ULTRA-OPTIMIZATIONS (320px - 991px)
+   ========================================================================== */
+
+/* Universal Showcase Image Helper */
+.hero-showcase-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  /* Hide desktop text action buttons in navbar on mobile screens */
+  .nav-actions .btn-call,
+  .nav-actions .btn-whatsapp,
+  .nav-actions .btn-royal,
+  .nav-actions > .btn:not(.btn-outline) {
+    display: none !important;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .theme-toggle-btn,
+  .cart-toggle-btn,
+  .mobile-nav-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Compact Navbar */
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .crown-icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+  }
+
+  .crown-icon-wrap svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.58rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Safe area inset support on body for sticky bottom bar */
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Compact Top Notice Bar */
+  .top-notice-bar {
+    padding: 0.35rem 0;
+    font-size: 0.72rem;
+  }
+
+  .notice-flex {
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .notice-items {
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .notice-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .highway-loc-item,
+  .notice-right-items {
+    display: none !important;
+  }
+
+  /* Section Padding reduction */
+  .section {
+    padding: 2.75rem 0;
+  }
+
+  .section-title-wrap {
+    margin: 0 auto 1.75rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 5.5vw, 2rem);
+    margin-bottom: 0.6rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .badge-tag {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.65rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .hero-grid {
+    gap: 1.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 6.5vw, 2.3rem);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-hindi-tag {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-pill-row {
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-rating-box {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .hero-btn-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-btn-group .btn {
+    width: 100%;
+    padding: 0.75rem 0.5rem !important;
+    font-size: 0.8rem;
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  .hero-quick-features {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    padding-top: 1rem;
+  }
+
+  .quick-feature-item {
+    gap: 0.5rem;
+  }
+
+  .qf-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+  }
+
+  .qf-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .qf-text h5 {
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
+
+  .qf-text p {
+    font-size: 0.68rem;
+  }
+
+  /* Hero Visual Card on Mobile */
+  .hero-visual-card {
+    border-radius: var(--radius-md);
+  }
+
+  .hero-visual-card img {
+    height: 220px !important;
+    object-fit: cover !important;
+    object-position: center 40% !important;
+  }
+
+  .hero-visual-overlay {
+    padding: 0.85rem;
+  }
+
+  .visual-top-tags {
+    gap: 0.35rem;
+  }
+
+  .visual-badge,
+  .visual-badge-ev {
+    font-size: 0.65rem;
+    padding: 0.22rem 0.55rem;
+  }
+
+  .visual-bottom-info {
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .visual-bottom-info h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .visual-bottom-info p {
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  /* Pillars on Mobile */
+  .pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .pillar-img-wrap {
+    height: 165px;
+  }
+
+  .pillar-body {
+    padding: 1.1rem;
+  }
+
+  .pillar-title {
+    font-size: 1.15rem;
+  }
+
+  .pillar-desc {
+    font-size: 0.82rem;
+    margin-bottom: 0.85rem;
+  }
+
+  /* Menu Section & Category Tabs */
+  .menu-controls {
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-tabs-scroll {
+    padding: 0.2rem 0.25rem 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .category-tabs-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-tabs {
+    gap: 0.45rem;
+  }
+
+  .cat-tab-btn {
+    font-size: 0.78rem;
+    padding: 0.45rem 0.9rem;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .menu-filter-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.65rem;
+  }
+
+  .diet-filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.4rem;
+  }
+
+  .diet-btn {
+    justify-content: center;
+    padding: 0.45rem 0.4rem;
+    font-size: 0.74rem;
+    text-align: center;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .menu-card-img-wrap {
+    height: 170px;
+  }
+
+  .menu-card-body {
+    padding: 1rem;
+  }
+
+  .item-title {
+    font-size: 1.05rem;
+  }
+
+  .item-price {
+    font-size: 1.05rem;
+  }
+
+  .item-desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.85rem;
+  }
+
+  .add-cart-btn {
+    min-height: 40px;
+    padding: 0.5rem 1rem;
+    font-size: 0.82rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Hotel Rooms Section */
+  .hotel-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .room-img-wrap {
+    height: 190px;
+  }
+
+  .room-body {
+    padding: 1.15rem;
+  }
+
+  .room-title {
+    font-size: 1.2rem;
+  }
+
+  .room-desc {
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
+  }
+
+  .room-footer-actions {
+    flex-direction: column;
+  }
+
+  .room-footer-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Banquet Section */
+  .banquet-banner {
+    padding: 1.35rem 1rem;
+    gap: 1.5rem;
+    border-radius: var(--radius-md);
+  }
+
+  .banquet-content h3 {
+    font-size: 1.55rem;
+    line-height: 1.25;
+  }
+
+  .banquet-specs {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+    margin: 1.25rem 0;
+  }
+
+  .spec-item strong {
+    font-size: 1.05rem;
+  }
+
+  .spec-item span {
+    font-size: 0.72rem;
+  }
+
+  .banquet-form-card {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Inputs iOS font zoom prevention (must be at least 16px) */
+  .form-input, .form-select, .form-textarea, .order-detail-input, .menu-search-input {
+    font-size: 16px !important;
+  }
+
+  /* EV Fast Charging */
+  .ev-grid {
+    gap: 1.5rem;
+  }
+
+  .ev-visual-wrap img {
+    height: 220px;
+  }
+
+  .ev-card-features {
+    gap: 0.85rem;
+    margin-top: 1.25rem;
+  }
+
+  .ev-feat-row {
+    padding: 0.85rem;
+  }
+
+  /* Reviews */
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .review-card {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Location Map */
+  .location-grid {
+    gap: 1.5rem;
+  }
+
+  .location-info-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .map-container {
+    min-height: 250px;
+    height: 250px;
+  }
+
+  .map-container iframe {
+    min-height: 250px;
+    height: 250px;
+  }
+
+  /* Subpages Showcase Photo */
+  .hero-showcase-img {
+    height: 220px !important;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .footer-grid {
+    gap: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Sticky Bottom Bar touch feedback & safe area */
+  .mobile-bottom-bar {
+    padding-bottom: calc(0.35rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  .mobile-bottom-item {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .mobile-bottom-item:active {
+    transform: scale(0.92);
+  }
+}
+
+/* Small Screens (e.g. iPhone SE, Fold, Galaxy S, 320px - 480px) */
+@media (max-width: 480px) {
+  .brand-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.54rem;
+  }
+
+  .crown-icon-wrap {
+    width: 34px;
+    height: 34px;
+  }
+
+  .crown-icon-wrap svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .theme-toggle-btn,
+  .cart-toggle-btn,
+  .mobile-nav-toggle {
+    width: 34px;
+    height: 34px;
+  }
+
+  .theme-toggle-btn svg,
+  .cart-toggle-btn svg,
+  .mobile-nav-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nav-actions {
+    gap: 0.35rem;
+  }
+
+  .nav-actions .btn-outline {
+    padding: 0.35rem 0.55rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  .nav-back-full {
+    display: none !important;
+  }
+
+  .nav-back-short {
+    display: inline !important;
+  }
+
+  /* Cart Drawer takes full screen on phone for effortless checkout */
+  .cart-drawer {
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+  }
+
+  .cart-header {
+    padding: 1rem 1.15rem;
+  }
+
+  .cart-items-container {
+    padding: 1rem 1.15rem;
+  }
+
+  .cart-footer {
+    padding: 1rem 1.15rem;
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Category Sticky Jump Nav on menu.html */
+  .category-jump-nav {
+    top: 54px;
+    padding: 0.45rem 0;
+  }
+
+  .jump-links {
+    padding: 0 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .jump-link {
+    padding: 0.32rem 0.65rem;
+    font-size: 0.72rem;
+  }
+}
+
