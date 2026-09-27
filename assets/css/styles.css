@@ -121,6 +121,9 @@
 }
 
 html {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
@@ -132,6 +135,9 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   padding-bottom: 72px; /* space for mobile bottom bar */
 }
 
@@ -632,22 +638,28 @@ ul, ol {
 .mobile-nav-menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 82%;
   max-width: 320px;
   height: 100vh;
+  height: 100dvh;
   background: var(--bg-secondary);
   border-left: 1px solid var(--border-gold);
   z-index: 1000;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: right 0.3s ease-in-out;
+  transform: translateX(105%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
   box-shadow: -10px 0 30px rgba(0,0,0,0.8);
 }
 
 .mobile-nav-menu.open {
-  right: 0;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-nav-header {
@@ -1907,21 +1919,27 @@ ul, ol {
 .cart-drawer {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 100%;
   max-width: 440px;
   height: 100vh;
+  height: 100dvh;
   background: var(--bg-secondary);
   border-left: 1px solid var(--border-gold);
   z-index: 1060;
   display: flex;
   flex-direction: column;
-  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateX(105%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
 }
 
 .cart-drawer.open {
-  right: 0;
+  transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .cart-header {
@@ -2547,30 +2565,32 @@ ul, ol {
 
   .container {
     padding: 0 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   /* Compact Top Notice Bar */
   .top-notice-bar {
     padding: 0.35rem 0;
     font-size: 0.72rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
   }
 
   .notice-flex {
     justify-content: center;
     gap: 0.4rem;
+    width: 100%;
+    flex-wrap: wrap;
   }
 
   .notice-items {
     justify-content: center;
     gap: 0.5rem;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .notice-items::-webkit-scrollbar {
-    display: none;
+    flex-wrap: wrap;
+    width: 100%;
   }
 
   .highway-loc-item,
