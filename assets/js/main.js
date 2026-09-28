@@ -60,13 +60,13 @@ document.addEventListener('DOMContentLoaded', () => {
         liveStatusDot.style.background = '#00d26a';
         liveStatusDot.style.boxShadow = '0 0 10px #00d26a';
       }
-      liveStatusText.innerHTML = '<strong style="color:#00d26a;">Open Now</strong> | Kitchen & Rooms Open Till 12:00 AM';
+      liveStatusText.innerHTML = '<strong class="status-open-text">Open Now</strong> | Kitchen & Rooms Open Till 12:00 AM';
     } else {
       if (liveStatusDot) {
         liveStatusDot.style.background = '#ef4444';
         liveStatusDot.style.boxShadow = '0 0 10px #ef4444';
       }
-      liveStatusText.innerHTML = '<strong style="color:#f87171;">Closed Now</strong> | Opens at 9:00 AM Daily';
+      liveStatusText.innerHTML = '<strong class="status-closed-text">Closed Now</strong> | Opens at 9:00 AM Daily';
     }
   }
   updateBusinessStatus();
